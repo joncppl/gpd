@@ -185,6 +185,14 @@ class GraspDetector {
     return image_generator_->getImageGeometry();
   }
 
+  std::unique_ptr<descriptor::ImageGenerator> & image_generator() {
+    return image_generator_;
+  }
+
+  std::shared_ptr<net::Classifier> & classifier() {
+    return classifier_;
+  }
+
  private:
   void printStdVector(const std::vector<int> &v, const std::string &name) const;
 

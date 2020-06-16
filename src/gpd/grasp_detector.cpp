@@ -327,8 +327,8 @@ std::vector<std::unique_ptr<candidate::Hand>> GraspDetector::detectGrasps(
   return clusters;
 }
 
-void GraspDetector::preprocessPointCloud(util::Cloud &cloud) {
-  candidates_generator_->preprocessPointCloud(cloud);
+void GraspDetector::preprocessPointCloud(util::Cloud &cloud, const std::vector<double> & workspace) {
+  candidates_generator_->preprocessPointCloud(cloud, workspace);
 }
 
 std::vector<std::unique_ptr<candidate::HandSet>>

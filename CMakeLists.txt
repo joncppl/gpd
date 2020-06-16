@@ -90,7 +90,7 @@ if(BUILD_DATA_GENERATION STREQUAL "ON")
 endif()
 
 # Generate the shared library from the sources
-add_library(${PROJECT_NAME}_grasp_detector SHARED src/${PROJECT_NAME}/grasp_detector.cpp)
+add_library(${PROJECT_NAME}_grasp_detector src/${PROJECT_NAME}/grasp_detector.cpp)
 
 add_library(${PROJECT_NAME}_classifier ${classifier_src})
 target_link_libraries(${PROJECT_NAME}_classifier

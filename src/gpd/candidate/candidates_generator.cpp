@@ -11,13 +11,13 @@ CandidatesGenerator::CandidatesGenerator(
   hand_search_ = std::make_unique<candidate::HandSearch>(hand_search_params);
 }
 
-void CandidatesGenerator::preprocessPointCloud(util::Cloud &cloud) {
+void CandidatesGenerator::preprocessPointCloud(util::Cloud &cloud, const std::vector<double> & workspace) {
   printf("Processing cloud with %zu points.\n",
          cloud.getCloudOriginal()->size());
 
   cloud.removeNans();
 
-  cloud.filterWorkspace(params_.workspace_);
+  cloud.filterWorkspace(workspace.empty() ? params_.workspace_ : workspace);
 
   if (params_.voxelize_) {
     cloud.voxelizeCloud(params_.voxel_size_);

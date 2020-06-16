@@ -93,7 +93,7 @@ class CandidatesGenerator {
    * \brief Preprocess the point cloud.
    * \param cloud_cam the point cloud
    */
-  void preprocessPointCloud(util::Cloud &cloud);
+  void preprocessPointCloud(util::Cloud &cloud, const std::vector<double> & workspace);
 
   /**
    * \brief Generate grasp candidates given a point cloud.

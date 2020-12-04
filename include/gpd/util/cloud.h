@@ -99,6 +99,8 @@ class Cloud {
     }
   };
 
+  ~Cloud();
+
   /**
    * \brief Comparator for checking uniqueness of two 4D-vectors.
    */

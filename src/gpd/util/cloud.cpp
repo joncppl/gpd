@@ -661,5 +661,7 @@ PointCloudRGB::Ptr Cloud::loadPointCloudFromFile(
 
 void Cloud::setSamples(const Eigen::Matrix3Xd &samples) { samples_ = samples; }
 
+Cloud::~Cloud() = default;
+
 }  // namespace util
 }  // namespace gpd
